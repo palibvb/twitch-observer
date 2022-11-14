@@ -545,8 +545,8 @@ class Observer(object):
                         channel, message = _privmsg_params_re.match(params).groups()
                         event.channel = channel
                         event.message = message
-                    elif event.message == '':
-                        event.message = 'No message attached'
+                    #elif event.message == None:
+                     #   event.message = 'No message attached'
 
                     else:
                         warnings.warn(RuntimeWarning('Failed to process {} message: {}'.format(cmd, message)))
